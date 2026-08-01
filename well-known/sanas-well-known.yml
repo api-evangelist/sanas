@@ -1,0 +1,37 @@
+generated: '2026-07-21'
+method: searched
+source: probed /.well-known/ on Sanas hosts 2026-07-21
+notes: >-
+  No real .well-known discovery documents are published. developer.sanas.ai
+  returns 404 for all probed paths; console.sanas.ai returns HTTP 200 for every
+  path but serves the SPA HTML shell (content-type text/html), not a valid
+  well-known document; sanas.ai redirects (308) to www. No SecurityTxt,
+  OpenID, OAuth authorization-server, api-catalog, or ai-plugin document found.
+hosts:
+- host: https://developer.sanas.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://console.sanas.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    valid: false
+    reason: SPA HTML shell (text/html), not security.txt
+  - path: /.well-known/openid-configuration
+    status: 200
+    valid: false
+    reason: SPA HTML shell (text/html), not JSON
+- host: https://sanas.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 308
+    reason: redirect to www.sanas.ai

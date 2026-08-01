@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: https://developer.sanas.ai/Docs/Resources/Changelog
+scheme: rolling (labeled updates; explicit dates not published on the changelog page)
+current_version: v3 (Stream API)
+notes: >-
+  Sanas publishes a rolling changelog of updates, fixes, and breaking changes to
+  the SDK. Entries are labeled by product area rather than dated versions; recent
+  entries captured verbatim below. Consult the live changelog for the current
+  window.
+entries:
+- label: Human ↔ Human
+  tags: [Models, Accounts]
+  breaking: false
+  highlights:
+  - New AT5.2 accent translation model (real-time accent modification preserving voice identity)
+  - New Language Translation model (real-time cross-language translation preserving tone/intent)
+  - Self-serve developer account signup, no sales contact required
+- label: AI Voice Agent
+  tags: [Models]
+  breaking: true
+  highlights:
+  - AGENTIC_SE deprecated, replaced by two specialized models
+  - AGENTIC_VI_G_NC (default) removes background noise and distant human voices
+  - AGENTIC_ST_NC removes background noise while preserving distant human speech
+  - 'Migration: update audio_params.modelName; no other code changes'

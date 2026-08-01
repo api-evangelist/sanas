@@ -1,0 +1,34 @@
+generated: '2026-07-21'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: sanas.ai
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 23 22:06:46 2026 GMT
+  hsts: true
+  hsts_max_age: 63072000
+- host: developer.sanas.ai
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  9 13:02:40 2026 GMT
+  hsts: true
+  hsts_max_age: 63072000
+- host: api.sanaslt.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov  6 23:59:59 2026 GMT
+  hsts: null
+domains:
+- domain: sanas.ai
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine
+- domain: sanaslt.com
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: true
+  dmarc_policy: none

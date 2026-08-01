@@ -1,0 +1,62 @@
+# Sanas Developer Hub
+
+## Docs
+
+- [Glossary](https://developer.sanas.ai/API-Reference/Cpp-SDK/Glossary.md): Definitions of Sanas Speech AI SDK terms and concepts
+- [API Lifecycle](https://developer.sanas.ai/API-Reference/Cpp-SDK/Guides/API-Lifecycle.md): The six-step sequence every SDK integration follows
+- [Audio Format & Sending Audio](https://developer.sanas.ai/API-Reference/Cpp-SDK/Guides/Audio-Format.md): Input requirements, real-time pacing, and PCM conversion for ProcessSamples
+- [Installation & Linking](https://developer.sanas.ai/API-Reference/Cpp-SDK/Guides/Installation.md): Install, compile, and link the Sanas Speech AI SDK, then authenticate with your API key
+- [Language Translation](https://developer.sanas.ai/API-Reference/Cpp-SDK/Guides/Language-Translation.md): Create a translation processor, choose languages, auto-detect, and switch languages live
+- [Processor State Handling](https://developer.sanas.ai/API-Reference/Cpp-SDK/Guides/Processor-States.md): Wait for kReady before sending audio — via callback or polling
+- [Quick Start — Language Translation](https://developer.sanas.ai/API-Reference/Cpp-SDK/Guides/Quick-Start.md): A complete, end-to-end C++ Language Translation program
+- [Threading & Lifetime Rules](https://developer.sanas.ai/API-Reference/Cpp-SDK/Guides/Threading-and-Lifetime.md): Thread-safety, callback constraints, and object lifetime for the SDK
+- [Transcripts](https://developer.sanas.ai/API-Reference/Cpp-SDK/Guides/Transcripts.md): Handle source and target transcript events delivered as JSON via callback
+- [Troubleshooting & Support](https://developer.sanas.ai/API-Reference/Cpp-SDK/Guides/Troubleshooting.md): Common symptoms and fixes, plus support resources
+- [C++ SDK Overview](https://developer.sanas.ai/API-Reference/Cpp-SDK/Overview.md): Real-time access to the Sanas cloud speech platform from a C++17 application
+- [Configuration Reference](https://developer.sanas.ai/API-Reference/Cpp-SDK/Reference/Configuration.md): InitParams, AudioParams, LanguageConfig, and JitterParams
+- [Core Classes](https://developer.sanas.ai/API-Reference/Cpp-SDK/Reference/Core-Classes.md): IRemoteSDK and IAudioProcessor — the two interfaces your application uses
+- [Result Codes](https://developer.sanas.ai/API-Reference/Cpp-SDK/Reference/Result-Codes.md): Return-value enums for Initialize, CreateAudioProcessor, UpdateLanguageConfig, and cleanup
+- [State Enum & Callbacks](https://developer.sanas.ai/API-Reference/Cpp-SDK/Reference/State-and-Callbacks.md): ProcessorState, ProcessorStateChange, and the state/transcript callback signatures
+- [Overview](https://developer.sanas.ai/API-Reference/Overview.md): Full API documentation for the Sanas SDK
+- [AudioProcessor](https://developer.sanas.ai/API-Reference/Reference/Core-Classes/AudioProcessor.md)
+- [RemoteSDK](https://developer.sanas.ai/API-Reference/Reference/Core-Classes/RemoteSDK.md)
+- [AudioParams](https://developer.sanas.ai/API-Reference/Reference/Parameters/AudioParams.md)
+- [InitParams](https://developer.sanas.ai/API-Reference/Reference/Parameters/InitParams.md)
+- [CreateProcessorResult](https://developer.sanas.ai/API-Reference/Reference/Result-Enums/CreateProcessorResult.md)
+- [DestroyProcessorResult](https://developer.sanas.ai/API-Reference/Reference/Result-Enums/DestroyProcessorResult.md)
+- [InitSDKResult](https://developer.sanas.ai/API-Reference/Reference/Result-Enums/InitSDKResult.md)
+- [ShutdownSDKResult](https://developer.sanas.ai/API-Reference/Reference/Result-Enums/ShutdownSDKResult.md)
+- [State Callbacks](https://developer.sanas.ai/API-Reference/Reference/State-Callbacks.md)
+- [ProcessorState](https://developer.sanas.ai/API-Reference/Reference/State-Enums/ProcessorState.md)
+- [Sanas Cloud](https://developer.sanas.ai/Docs/Deployment/Sanas-Cloud.md): Cloud-hosted deployment for the Sanas SDK
+- [Self-Hosted (Coming Soon)](https://developer.sanas.ai/Docs/Deployment/Self-Hosted.md): Self-hosted deployment for the Sanas SDK
+- [Compliance & Data Residency](https://developer.sanas.ai/Docs/Enterprise/Compliance-and-Data-Residency.md)
+- [Security](https://developer.sanas.ai/Docs/Enterprise/Security.md)
+- [Support](https://developer.sanas.ai/Docs/Enterprise/Support.md)
+- [Set up account](https://developer.sanas.ai/Docs/Getting-Started/Authentication.md): Create a developer account.
+- [Overview of Sanas](https://developer.sanas.ai/Docs/Getting-Started/Overview.md): Get started building with real-time speech AI using the Sanas SDK
+- [Quick Start](https://developer.sanas.ai/Docs/Getting-Started/Quick-Start.md): Get up and running with the Sanas SDK in under 5 minutes.
+- [Language Translation](https://developer.sanas.ai/Docs/Language-Translation/Overview.md): Add real-time speech-to-speech translation to your application with WebRTC, WebSocket, and REST APIs
+- [REST API](https://developer.sanas.ai/Docs/Language-Translation/REST-API.md): HTTP endpoints for account management, device registration, language listing, and Twilio video integration
+- [Stream Message Layer](https://developer.sanas.ai/Docs/Language-Translation/Stream-Message-Layer.md): The shared application protocol for the WebSocket Stream API and the WebRTC API
+- [WebRTC API](https://developer.sanas.ai/Docs/Language-Translation/WebRTC-API.md): Browser-native transport for the Stream API using WebRTC data channels and media tracks
+- [WebSocket API](https://developer.sanas.ai/Docs/Language-Translation/WebSocket-API.md): Real-time speech-to-speech translation over a single persistent WebSocket connection
+- [Choose Your Model](https://developer.sanas.ai/Docs/Models/Choose-Your-Model.md): Find the right Sanas model for your use case
+- [SE - Voice Isolation](https://developer.sanas.ai/Docs/Models/Human-Human/NC-Voice-Isolation.md): Real-time voice isolation for any acoustic environment.
+- [SE - Standard](https://developer.sanas.ai/Docs/Models/Human-Human/SE-Standard.md): Real-time speech enhancement optimized for 8kHz telephony audio
+- [SE with full-fidelity](https://developer.sanas.ai/Docs/Models/Human-Human/SE-Ultra.md): Real-time speech enhancement with bandwidth extension to 24kHz ultra-fidelity audio
+- [Models Overview ](https://developer.sanas.ai/Docs/Models/Overview.md)
+- [Changelog](https://developer.sanas.ai/Docs/Resources/Changelog.md): All updates, fixes, and breaking changes to the Sanas SDK
+- [Pricing](https://developer.sanas.ai/Docs/Resources/Pricing.md)
+- [Sanas Developer Platform — FAQ  ](https://developer.sanas.ai/Docs/Resources/untitled-page.md)
+- [Processing Multiple Streams](https://developer.sanas.ai/Docs/Tutorials/Processing-Multiple-Streams.md): Run many concurrent audio processors on a single SDK instance, and benchmark throughput, concurrency, and memory.
+- [Processing a Single Stream](https://developer.sanas.ai/Docs/Tutorials/untitled-page.md): Run a WAV file through the Sanas SDK end to end — activate, wait for RUNNING, feed 20 ms frames, and drain the tail.
+- [Language Translation](https://developer.sanas.ai/Docs/Tutorials/untitled-page-1.md): Translate speech from one language to another and receive both translated audio and transcript segments.
+- [Accent Translation](https://developer.sanas.ai/accent-translation.md): Real-time accent modulation that preserves voice identity and emotion.
+- [Agentic SE Voice Isolation (Telephony)](https://developer.sanas.ai/agentic.md): ASR-optimized speech enhancement for telephony audio pipelines
+- [Agentic SE Standard](https://developer.sanas.ai/agentic-standard.md): ASR-optimized speech enhancement with speech preservation for multi-speaker environments
+- [Agentic SE Voice Isolation](https://developer.sanas.ai/untitled-page.md): ASR-optimized speech enhancement for voice AI pipelines
+
+## OpenAPI Specs
+
+- [openapi](https://developer.sanas.ai/api-reference/openapi.json)

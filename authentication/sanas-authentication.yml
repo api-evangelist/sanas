@@ -1,0 +1,43 @@
+generated: '2026-07-21'
+method: searched
+source: https://developer.sanas.ai/Docs/Language-Translation/WebSocket-API.md
+docs: https://developer.sanas.ai/API-Reference/Cpp-SDK/Guides/Installation.md
+summary:
+  types:
+  - apiKey
+  - http
+  api_key_in:
+  - query
+  - sdk-init
+  http_schemes:
+  - bearer
+  oauth2_flows: []
+schemes:
+- name: apiKey
+  type: apiKey
+  in: query
+  parameter: api_key
+  applies_to: Sanas Stream API (WebSocket)
+  description: >-
+    API key issued from the Sanas Developer Console, supplied as the api_key
+    query parameter on the wss://api.sanaslt.com/v3/stream connection URL.
+    Validated before the WebSocket upgrade; failure returns HTTP 401.
+- name: bearerToken
+  type: http
+  scheme: bearer
+  bearer_format: JWT
+  in: query
+  parameter: token
+  applies_to: Sanas Stream API (WebSocket)
+  description: >-
+    JWT bearer token (issued via Supabase) supplied as the token query
+    parameter. Provide either token or api_key, not both.
+- name: sdkApiKey
+  type: apiKey
+  in: sdk-init
+  parameter: InitParams.apiKey
+  applies_to: Sanas Speech AI SDK (C++/Python)
+  description: >-
+    API key from the Sanas Developer Console set on InitParams.apiKey (or read
+    from the SANAS_API_KEY environment variable) at SDK Initialize(). The SDK
+    uses it to authenticate to Sanas Cloud and auto-resolve the server endpoint.

@@ -1,0 +1,34 @@
+generated: '2026-07-21'
+method: searched
+source: https://developer.sanas.ai/API-Reference/Cpp-SDK/Guides/Installation.md
+notes: >-
+  Sanas ships first-party client SDKs directly to developers (header + shared
+  library for C++, self-contained Python wheel) rather than through public
+  package registries. Probed npm, PyPI, Maven Central, NuGet, pkg.go.dev,
+  RubyGems, crates.io and Packagist on 2026-07-21 and found no published Sanas
+  client package (PyPI/sanas 404, npm/@sanas and npm/sanas 404). Packages below
+  are the documented first-party distributions, delivered via the Sanas
+  Developer Console.
+packages:
+- language: cpp
+  registry: first-party
+  name: Sanas Speech AI SDK (C++)
+  url: https://developer.sanas.ai/API-Reference/Cpp-SDK/Overview
+  install: >-
+    Provided as RemoteSDK.h plus the platform shared library
+    (libRemoteSdk.so / libRemoteSdk.dylib / RemoteSdk.dll); link with
+    g++ -std=c++17 ... -lRemoteSdk
+  official: true
+  requires: C++17 or newer
+- language: python
+  registry: first-party
+  name: Sanas Speech AI SDK (Python)
+  url: https://developer.sanas.ai/API-Reference/Overview
+  install: Self-contained Python wheel provided by Sanas
+  official: true
+- language: javascript
+  registry: first-party
+  name: Sanas Language Translation (JavaScript / WebRTC)
+  url: https://developer.sanas.ai/Docs/Language-Translation/WebSocket-API
+  install: Browser Language Translation API over WebRTC / WebSocket
+  official: true

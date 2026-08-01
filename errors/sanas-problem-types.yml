@@ -1,0 +1,32 @@
+generated: '2026-07-21'
+method: searched
+source: https://developer.sanas.ai/Docs/Language-Translation/WebSocket-API.md
+format: mixed
+notes: >-
+  Sanas has no OpenAPI-declared error responses (the developer hub's
+  api-reference/openapi.json is a Mintlify template placeholder, not the real
+  API). Errors below are derived from the WebSocket Stream API and SDK docs:
+  transport-level auth failures return HTTP 401 before the WebSocket upgrade,
+  and application errors arrive as JSON `error` messages on the Stream message
+  layer. SDK calls return result-code enums.
+problems:
+- status: 401
+  title: Authentication failed
+  detail: >-
+    Invalid or missing token/api_key on the Stream connection. Returned as an
+    HTTP 401 before the WebSocket upgrade (not a WebSocket close frame).
+  source_operation: Sanas Stream API connect (wss://api.sanaslt.com/v3/stream)
+- channel: stream
+  message: error
+  title: Stream error event
+  detail: >-
+    Application-level errors during a session are delivered as an `error` JSON
+    text frame on the WebSocket Stream message layer.
+  source_operation: asyncapi/sanas-stream-asyncapi.yml
+sdk_result_enums:
+  reference: https://developer.sanas.ai/API-Reference/Cpp-SDK/Reference/Result-Codes
+  enums:
+  - InitSDKResult
+  - CreateProcessorResult
+  - DestroyProcessorResult
+  - ShutdownSDKResult

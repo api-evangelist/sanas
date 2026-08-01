@@ -1,8 +1,20 @@
 aid: sanas
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 12
+  pass: local-v1
 name: Sanas
-description: Sanas is a company surfaced as a portfolio company of general-catalyst, gv, insight-partners
-  and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the
-  enrichment pipeline.
+description: >-
+  Sanas is a real-time speech AI platform that removes communication barriers
+  through accent translation, language translation, speech enhancement, and
+  speech intelligence. Its developer platform exposes these capabilities as a
+  server-side SDK (C++17 and Python) plus a persistent WebSocket Stream API for
+  real-time speech-to-speech translation, letting teams add real-time speech
+  processing to voice-agent and contact-center pipelines they already run.
+  Models are billed per minute and run on Sanas Cloud or self-hosted
+  infrastructure, serving healthcare, financial services, retail, travel, and
+  telecommunications customers.
 url: https://raw.githubusercontent.com/api-evangelist/sanas/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,12 +24,78 @@ x-backed-by:
 - insight-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+image: https://www.sanas.ai/static-image.jpg
 tags:
 - Company
-apis: []
+- Speech AI
+- Voice AI
+- Accent Translation
+- Language Translation
+- Speech Enhancement
+- Real-Time Audio
+- SDK
+- WebSocket
+- Contact Center
+apis:
+- name: Sanas Stream API
+  description: >-
+    Real-time speech-to-speech translation over a single persistent WebSocket
+    connection, supporting consecutive and simultaneous modes. Authenticated
+    with a JWT bearer token or API key passed as a query parameter; audio is
+    exchanged as raw PCM binary frames with a JSON message layer (init,
+    configure, flush, configured, transcript, error).
+  humanURL: https://developer.sanas.ai/Docs/Language-Translation/WebSocket-API
+  baseURL: wss://api.sanaslt.com/v3/stream
+  tags:
+  - Speech AI
+  - Language Translation
+  - WebSocket
+  - Streaming
+  properties:
+  - type: Documentation
+    url: https://developer.sanas.ai
+  - type: APIReference
+    url: https://developer.sanas.ai/API-Reference/Overview
+  - type: Authentication
+    url: authentication/sanas-authentication.yml
+  - type: AsyncAPI
+    url: asyncapi/sanas-stream-asyncapi.yml
+  - type: Conventions
+    url: conventions/sanas-conventions.yml
+- name: Sanas Speech AI SDK
+  description: >-
+    Server-side C++17 and Python SDK for real-time speech enhancement, accent
+    translation, and language translation. Applications initialize the SDK with
+    an API key, create an audio processor for a chosen model, and stream
+    interleaved float32 PCM frames, receiving processed audio and transcript
+    callbacks. Inference runs on Sanas Cloud or self-hosted infrastructure.
+  humanURL: https://developer.sanas.ai/API-Reference/Overview
+  baseURL: https://developer.sanas.ai
+  tags:
+  - Speech AI
+  - SDK
+  - Speech Enhancement
+  - Accent Translation
+  properties:
+  - type: GettingStarted
+    url: https://developer.sanas.ai/Docs/Getting-Started/Quick-Start
+  - type: Documentation
+    url: https://developer.sanas.ai
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,4 +103,55 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: sanas.ai
+  url: https://sanas.ai
+- type: DeveloperPortal
+  url: https://developer.sanas.ai
+- type: Documentation
+  url: https://developer.sanas.ai
+- type: APIReference
+  url: https://developer.sanas.ai/API-Reference/Overview
+- type: GettingStarted
+  url: https://developer.sanas.ai/Docs/Getting-Started/Quick-Start
+- type: Blog
+  url: https://sanas.ai/blog
+- type: Support
+  url: https://support.sanas.ai/support/home
+- type: Pricing
+  url: https://developer.sanas.ai/Docs/Resources/Pricing
+- type: SignUp
+  url: https://console.sanas.ai/signup
+- type: TermsOfService
+  url: https://sanas.ai/legal-policy
+- type: PrivacyPolicy
+  url: https://sanas.ai/privacy-policy
+- type: TrustCenter
+  url: https://trust.sanas.ai
+- type: Compliance
+  url: https://developer.sanas.ai/Docs/Enterprise/Compliance-and-Data-Residency
+- type: ChangeLog
+  url: https://developer.sanas.ai/Docs/Resources/Changelog
+- type: LLMsTxt
+  url: llms/sanas-llms.txt
+- type: Packages
+  url: packages/sanas-packages.yml
+- type: SDKs
+  url: packages/sanas-packages.yml
+- type: Authentication
+  url: authentication/sanas-authentication.yml
+- type: Conventions
+  url: conventions/sanas-conventions.yml
+- type: Conformance
+  url: conformance/sanas-conformance.yml
+- type: Lifecycle
+  url: lifecycle/sanas-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/sanas-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/sanas-problem-types.yml
+- type: ChangeLog
+  url: changelog/sanas-changelog.yml
+  name: Changelog artifact
+- type: AsyncAPI
+  url: asyncapi/sanas-stream-asyncapi.yml
+- type: DomainSecurity
+  url: security/sanas-domain-security.yml

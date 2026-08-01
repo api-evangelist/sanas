@@ -1,0 +1,104 @@
+generated: '2026-07-21'
+method: searched
+source: https://developer.sanas.ai/Docs/Language-Translation/WebSocket-API.md
+spec_type: AsyncAPI
+asyncapi: 3.0.0
+info:
+  title: Sanas Stream API
+  version: v3
+  description: >-
+    Real-time speech-to-speech translation over a single persistent WebSocket
+    connection. Supports consecutive and simultaneous modes. Modeled by API
+    Evangelist from the published Sanas WebSocket API and Stream message-layer
+    documentation; not a Sanas-published AsyncAPI document.
+servers:
+  production:
+    host: api.sanaslt.com
+    pathname: /v3/stream
+    protocol: wss
+    description: Sanas real-time translation Stream endpoint
+    security:
+    - $ref: '#/components/securitySchemes/apiKeyQuery'
+    - $ref: '#/components/securitySchemes/bearerQuery'
+channels:
+  stream:
+    address: /v3/stream
+    description: Bidirectional WebSocket carrying JSON control text frames and PCM audio binary frames.
+    messages:
+      init:
+        $ref: '#/components/messages/init'
+      configure:
+        $ref: '#/components/messages/configure'
+      flush:
+        $ref: '#/components/messages/flush'
+      configured:
+        $ref: '#/components/messages/configured'
+      transcript:
+        $ref: '#/components/messages/transcript'
+      error:
+        $ref: '#/components/messages/error'
+      audioIn:
+        $ref: '#/components/messages/audioFrame'
+      audioOut:
+        $ref: '#/components/messages/audioFrame'
+operations:
+  sendControl:
+    action: send
+    channel:
+      $ref: '#/channels/stream'
+    messages:
+    - $ref: '#/channels/stream/messages/init'
+    - $ref: '#/channels/stream/messages/configure'
+    - $ref: '#/channels/stream/messages/flush'
+  receiveEvents:
+    action: receive
+    channel:
+      $ref: '#/channels/stream'
+    messages:
+    - $ref: '#/channels/stream/messages/configured'
+    - $ref: '#/channels/stream/messages/transcript'
+    - $ref: '#/channels/stream/messages/error'
+components:
+  securitySchemes:
+    apiKeyQuery:
+      type: httpApiKey
+      in: query
+      name: api_key
+      description: Developer Console API key passed as a query parameter (validated before WebSocket upgrade).
+    bearerQuery:
+      type: httpApiKey
+      in: query
+      name: token
+      description: JWT bearer token (from Supabase) passed as a query parameter.
+  messages:
+    init:
+      title: init
+      summary: Opens the session and declares input/output sample rates.
+      contentType: application/json
+    configure:
+      title: configure
+      summary: >-
+        Sets or reconfigures the translation pipeline (languages, voice, glossary,
+        features); server replies with configured when ready. Carries optional
+        request_id for correlation.
+      contentType: application/json
+    flush:
+      title: flush
+      summary: Manually finalizes the current turn; server confirms when fully processed.
+      contentType: application/json
+    configured:
+      title: configured
+      summary: Confirms the pipeline is ready to accept audio; echoes request_id.
+      contentType: application/json
+    transcript:
+      title: transcript
+      summary: Source and target transcript segments delivered as JSON.
+      contentType: application/json
+    error:
+      title: error
+      summary: Application-level error event on the stream.
+      contentType: application/json
+    audioFrame:
+      title: audioFrame
+      summary: Raw PCM audio bytes carried as a WebSocket binary frame (not JSON/base64).
+      contentType: application/octet-stream

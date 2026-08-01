@@ -1,0 +1,23 @@
+generated: '2026-07-21'
+method: searched
+source: https://developer.sanas.ai/Docs/Resources/Changelog.md
+versioning:
+  scheme: uri-path
+  current: v3
+  evidence: wss://api.sanaslt.com/v3/stream
+deprecation:
+  policy_url: https://developer.sanas.ai/Docs/Resources/Changelog
+  practice: >-
+    Model deprecations are announced in the changelog with named replacements
+    and migration guidance. Example: AGENTIC_SE deprecated and replaced by
+    AGENTIC_VI_G_NC (default) and AGENTIC_ST_NC — migration is changing
+    audio_params.modelName, no other code changes.
+  sunset_header: false
+status_page: null
+sla:
+  url: null
+  notes: No public status page or SLA page found as of 2026-07-21.
+deprecated_operations: []
+deprecated_models:
+- name: AGENTIC_SE
+  replaced_by: [AGENTIC_VI_G_NC, AGENTIC_ST_NC]

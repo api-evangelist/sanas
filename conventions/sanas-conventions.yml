@@ -1,0 +1,45 @@
+generated: '2026-07-21'
+method: searched
+source: https://developer.sanas.ai/Docs/Language-Translation/WebSocket-API.md
+docs:
+- https://developer.sanas.ai/Docs/Language-Translation/Stream-Message-Layer
+- https://developer.sanas.ai/API-Reference/Cpp-SDK/Guides/API-Lifecycle
+authentication:
+  style: api-key or JWT bearer via query parameter (Stream API); API key via SDK InitParams
+  reference: authentication/sanas-authentication.yml
+transport:
+  streaming: WebSocket (wss://api.sanaslt.com/v3/stream)
+  audio_encoding: raw PCM bytes in WebSocket binary frames (not JSON/base64)
+  control_messages: JSON text frames (init, configure, flush, configured, transcript, error)
+  modes:
+  - consecutive (speak, wait, hear translation)
+  - simultaneous (continuous translation while speaking)
+request_tracing:
+  field: request_id
+  behavior: >-
+    Client-specified request_id on configure/flush messages is echoed back in
+    the corresponding configured/flush-done server response for correlation.
+idempotency:
+  supported: false
+  notes: Real-time streaming session; no idempotency-key contract documented.
+pagination:
+  supported: false
+  notes: Streaming/SDK surface; no collection pagination.
+versioning:
+  scheme: uri-path
+  current: v3
+  evidence: wss://api.sanaslt.com/v3/stream
+  reference: lifecycle/sanas-lifecycle.yml
+error_envelope:
+  transport_auth_failure: HTTP 401 returned before the WebSocket upgrade (not a close frame)
+  application_errors: JSON `error` message on the Stream message layer
+  reference: errors/sanas-problem-types.yml
+sdk_lifecycle:
+  sequence: create_sdk -> activate_api_key -> create_audio_processor -> process_frame -> shutdown
+  readiness: >-
+    Wait for processor state RUNNING/kReady (via audio_pipeline_state_notify
+    callback or polling) before sending audio frames.
+privacy_controls:
+  skip_logging: >-
+    Setting the skip_logging feature on any configure opts the session out of
+    server-side recording for the lifetime of the stream.

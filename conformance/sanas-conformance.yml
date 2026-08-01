@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: searched
+source: https://developer.sanas.ai/Docs/Enterprise/Compliance-and-Data-Residency.md
+standards:
+- id: soc2-type2
+  conforms: true
+  evidence: SSAE-21 SOC 2 Type II attested (Compliance & Data Residency page)
+- id: iso-27001
+  conforms: true
+  evidence: ISO 27001:2022 information security management system certified
+- id: hipaa
+  conforms: true
+  evidence: HIPAA compliant; BAA available for enterprise customers
+- id: gdpr
+  conforms: true
+  evidence: Compliant with EU, UK, and Swiss data protection regulations
+- id: pci-dss
+  conforms: true
+  evidence: PCI DSS compliant
+- id: ccpa
+  conforms: true
+  evidence: California Consumer Privacy Act compliant
+- id: oauth2
+  conforms: false
+  evidence: Auth is API key / JWT bearer query parameter; no OAuth2 flows documented
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors delivered as JSON `error` messages over WebSocket, not application/problem+json
+- id: asyncapi
+  conforms: true
+  evidence: WebSocket Stream API modeled as asyncapi/sanas-stream-asyncapi.yml
