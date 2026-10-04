@@ -63,6 +63,7 @@ tags:
 - SDK
 - WebSocket
 - Contact Center
+- Real-Time
 apis:
 - name: Sanas Stream API
   description: >-
