@@ -16,9 +16,49 @@ edges:
   detected: '2026-10-18'
   detected_by: mirror-platform-listings.py
   category: Zoom app
+- partner_name: Genesys (own)
+  partner: genesys
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://appfoundry.genesys.com/filter/genesyscloud/listing/f2674340-17a7-49a0-82b3-18a2c3b2528a
+  mirror_of: genesys/integrations/genesys-integration-edges.yml
+  apps:
+  - Sanas Accent Translation & Noise Cancellation
+  listing_count: 1
+  detected: '2026-10-19'
+  detected_by: mirror-platform-listings.py
+  publisher_verified:
+  - attestation:gdpr
+  - attestation:hipaa
+  - attestation:iso
+  - attestation:pci
+  - attestation:soc2
+- partner_name: Talkdesk (own)
+  partner: talkdesk
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://appconnect.talkdesk.com/apps/sanas-real-time-speech-understanding-platform
+  mirror_of: talkdesk/integrations/talkdesk-integration-edges.yml
+  apps:
+  - Sanas Real-Time Speech Understanding Platform
+  listing_count: 1
+  detected: '2026-10-19'
+  detected_by: mirror-platform-listings.py
 generated: '2026-10-18'
 method: searched
 source:
 - zoom/integrations/zoom-integration-edges.yml
 checked:
+- genesys/integrations/genesys-integration-edges.yml
+- talkdesk/integrations/talkdesk-integration-edges.yml
 - zoom/integrations/zoom-integration-edges.yml

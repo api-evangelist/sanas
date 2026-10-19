@@ -16,3 +16,27 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: sanas-genesys-own
+  label: Genesys (own)
+  partner: genesys
+  partner_name: Genesys (own)
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appfoundry.genesys.com/filter/genesyscloud/listing/f2674340-17a7-49a0-82b3-18a2c3b2528a
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: sanas-talkdesk-own
+  label: Talkdesk (own)
+  partner: talkdesk
+  partner_name: Talkdesk (own)
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appconnect.talkdesk.com/apps/sanas-real-time-speech-understanding-platform
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
