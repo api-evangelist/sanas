@@ -64,6 +64,118 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Sanas is a company surfaced as a portfolio company of general-catalyst, gv, insight-partners and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Sanas is a real-time speech AI platform that removes communication barriers through accent translation, language translation, speech enhancement, and speech intelligence. Its developer platform exposes these capabilities as a server-side SDK (C++17 and Python) plus a persistent WebSocket Stream API for real-time speech-to-speech translation, letting teams add real-time speech processing to voice-agent and contact-center pipelines they already run. Models are billed per minute and run on Sanas Cloud or self-hosted infrastructure, serving healthcare, financial services, retail, travel, and telecommunications customers.
 
-Backed by: general-catalyst, gv, insight-partners — sanas.ai
+**Areas:** Company · Speech AI · Voice AI · Accent Translation · Language Translation · Speech Enhancement · Real-Time Audio · SDK · WebSocket · Contact Center · Real-Time
+
+## Sanas on APIs.io
+
+Everything profiled for Sanas is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/sanas/](https://apis.io/providers/sanas/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [Sanas Stream API](https://apis.io/apis/sanas/sanas-stream-api/) — Real-time speech-to-speech translation over a single persistent WebSocket connection, supporting consecutive and simultaneous modes. Authenticated with a…
+- [Sanas Speech AI SDK](https://apis.io/apis/sanas/sanas-speech-ai-sdk/) — Server-side C++17 and Python SDK for real-time speech enhancement, accent translation, and language translation. Applications initialize the SDK with an API…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Sanas Stream API](https://apis.io/asyncapis/sanas/sanas-stream-asyncapi/)
+
+#### Event channels (1)
+
+Individual events and webhooks the provider emits.
+
+- [/v3/stream](https://apis.io/channels/sanas/v3-stream/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [sanas](https://apis.io/servers/sanas/sanas/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Sanas Authentication](https://apis.io/security/sanas/sanas-authentication/)
+- [Sanas Domain Security](https://apis.io/security/sanas/sanas-domain-security/)
+- [Sanas Trust Center](https://apis.io/security/sanas/sanas-trust-center/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://sanas.ai)
+- [Documentation](https://developer.sanas.ai)
+- [Getting started](https://developer.sanas.ai/Docs/Getting-Started/Quick-Start)
+- [API reference](https://developer.sanas.ai/API-Reference/Overview)
+- [Pricing](https://developer.sanas.ai/Docs/Resources/Pricing)
+- [Sign up](https://console.sanas.ai/signup)
+- [Support](https://support.sanas.ai/support/home)
+- [Changelog](https://developer.sanas.ai/Docs/Resources/Changelog)
+- [Blog](https://sanas.ai/blog)
+- [Compliance](https://developer.sanas.ai/Docs/Enterprise/Compliance-and-Data-Residency)
+- [Trust centre](https://trust.sanas.ai)
+- [Terms of service](https://sanas.ai/legal-policy)
+- [Privacy policy](https://sanas.ai/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 47.5** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 42.7 |
+| Contract governance | 18.2 |
+| Operational transparency | 23.7 |
+| Developer ergonomics | 64.3 |
+| Access clarity | 47.4 |
+
+**Agent readiness 24.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 29.4** — AI & Biometrics
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/sanas/](https://apis.io/providers/sanas/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Sanas: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/sanas/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
